@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clash Royale</title>
+  <title>Cadastro - Clash Royale</title>
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 
@@ -21,9 +21,25 @@
 
     header {
       text-align: center;
-      padding: 140px 16px 80px; /* ALTURA CORRIGIDA */
+      padding: 140px 16px 80px;
       background: rgba(0,0,0,0.55);
-      min-height:120vh;
+      min-height: 120vh;
+    }
+
+    .cadastro-box {
+      max-width: 350px;
+      margin: 20px auto 0;
+      background: rgba(255,255,255,0.1);
+      padding: 20px;
+      border-radius: 10px;
+      backdrop-filter: blur(5px);
+    }
+
+    .btn-yellow {
+      background: #f1c40f;
+      color: #000;
+      font-weight: bold;
+      border: none;
     }
 
     .btn-sobre {
@@ -35,22 +51,6 @@
       border-radius: 6px;
       border: none;
       cursor: pointer;
-    }
-
-    .login-box {
-      max-width: 350px;
-      margin: 20px auto 0;
-      background: rgba(255,255,255,0.1);
-      padding: 20px;
-      border-radius: 10px;
-      backdrop-filter: blur(5px);
-    }
-
-    #sobre {
-      margin-top: 0; 
-      padding: 50px 20px;
-      background: rgba(0,0,0,0.75);
-      text-align: center;
     }
 
     footer {
@@ -78,34 +78,38 @@
 
       <div id="menu" class="collapse navbar-collapse show">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a class="nav-link" href="#header">Início</a></li>
-          <li class="nav-item"><a class="nav-link" href="#sobre">sobre</a></li>
-          <li class="nav-item"><a class="nav-link" href="#header">Login</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#header">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#header">Login</a></li>
           <li class="nav-item"><a class="nav-link" href="#cadastro">Cadastro</a></li>
         </ul>
       </div>
     </div>
   </nav>
-  
+
   <!-- HEADER -->
-  <header id="header">
+  <header id="cadastro">
 
-    <h1>Bem-vindo ao Clash Royale</h1>
-    <p>Entre e participe da batalha!</p>
+    <h1>Crie sua conta</h1>
+    <p>Preencha o formulário abaixo</p>
 
-    <!-- BOTÃO "SOBRE" (CLICÁVEL E REDIRECIONA) -->
+    <!-- BOTÃO SOBRE -->
     <a href="sobre.html">
       <button class="btn-sobre">Sobre</button>
     </a>
 
-    <div class="login-box">
+    <div class="cadastro-box">
       <form>
         <input type="text" class="form-control mb-2" placeholder="Nome" required>
         <input type="email" class="form-control mb-2" placeholder="E-mail" required>
         <input type="password" class="form-control mb-2" placeholder="Senha" required>
 
-        <button type="submit" class="btn btn-light btn-block" style="background:#f1c40f; color:#000;">Login</button>
-        <a href="cadastro.html" class="btn btn-white btn-block" style="background:#fff; color:#000; font-weight:bold;">Cadastre-se</a>
+        <button type="submit" class="btn btn-yellow btn-block">Cadastrar</button>
+
+        <!-- BOTÃO VOLTAR AO LOGIN -->
+        <a href="index.html" class="btn btn-light btn-block" style="font-weight:bold;">
+          Voltar ao Login
+        </a>
       </form>
     </div>
 
