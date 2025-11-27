@@ -1,36 +1,89 @@
-body{
+/* ======== ESTILO GERAL ======== */
+body {
     margin: 0;
     background-color: rgb(60, 60, 160);
+    font-family: Arial, Helvetica, sans-serif;
 }
-header{
+
+header {
     background-color: rgb(39, 39, 87);
+    width: 95%;
+    max-width: 1300px;
+    height: 90px;
+    margin: 20px auto;
+    border-radius: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 95%;
-    height: 10vw;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 5vw;
-    margin-top: 1vw;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
 }
-h1{
+
+header h1 {
     color: white;
+    font-size: clamp(22px, 4vw, 38px);
 }
-.carousel-inner{
-    margin-top: 3vw;
+
+/* ======== CARROSSEL ======== */
+.carousel-inner {
     background-color: rgb(11, 11, 53);
-    border-radius: 3vw;
-    width: 90vw;
-    margin-left: auto;
-    margin-right: auto;
-    height: 28vw;
+    width: 90%;
+    max-width: 900px;
+    height: 330px;
+    margin: 30px auto;
+    border-radius: 20px;
+    overflow: hidden;
     display: flex;
     align-items: center;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
 }
-img{
-    width: 320px;
-    height: 429px;
-    margin-right: auto;
-    margin-left: auto;
+
+.carousel-item img {
+    height: 90%;
+    width: auto;
+    max-height: 300px;
+    margin: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* ======== BOTÕES ======== */
+.btn-area {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-voltar {
+    margin: 10px auto;
+    display: block;
+    background: #f1c40f;
+    color: #000;
+    font-weight: bold;
+    padding: 12px 25px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    width: 240px;
+    transition: 0.3s;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+
+.btn-voltar:hover {
+    transform: scale(1.05);
+    background: #ffd84a;
+}
+
+/* ======== RESPONSIVIDADE ======== */
+@media (max-width: 600px) {
+    .carousel-inner {
+        height: 250px;
+    }
+
+    .carousel-item img {
+        max-height: 220px;
+    }
+
+    header {
+        height: 70px;
+    }
 }
